@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAIXA</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #007bff;
+    }
+
+    .sales {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .sale {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .sale p {
+        margin: 5px 0;
+    }
+</style>
+</head>
+<body>
+<h1>CAIXA</h1>
+<ul class="sales" id="salesList"></ul>
+
+<script>
+    function addSale(productName, quantity, total) {
+        const salesList = document.getElementById('salesList');
+
+        const saleItem = document.createElement('li');
+        saleItem.classList.add('sale');
+        saleItem.innerHTML = `
+            <p><strong>Produto:</strong> ${productName}</p>
+            <p><strong>Quantidade:</strong> ${quantity}</p>
+            <p><strong>Total:</strong> R$ ${total.toFixed(2)}</p>
+        `;
+
+        salesList.appendChild(saleItem);
+    }
+
+    // Exemplo de uso: adicionar uma venda à lista
+    addSale('Coca-Cola', 2, 10);
+    addSale('Coxinha de frango', 1, 6);
+    addSale('Paçoca', 3, 3);
+</script>
+</body>
+</html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+     <link rel="stylesheet" type="text/css" href="caixaCss.css"> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAIXA</title>
+</head>
+<body>
+<h1>CAIXA</h1>
+
+<div class="sidebar">
+    <ul>
+        <li><a href="/pdv/pdv.html">PDV</a></li>
+        <li><a href="/caixa/caixa.html">CAX</a></li>
+        <li><a href="/produtos/produto.html">PDT</a></li>
+    </ul>
+</div>
+
+<div class="sales" id="sales"></div>
+
+ <script type="text/javascript" src="caixaJs.js"></script>
+</body>
+</html>
+-->
